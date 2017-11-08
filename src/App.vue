@@ -1,12 +1,19 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <ul>
+        <li><a href="/computed-properties.html">Computed Properties</a></li>
+      </ul>
     <h1>{{ msg }}</h1>
     <br/><br/>
     <div>
       <h1>Filters Example</h1>
       {{ 'hello world' | capitalize }} <br/>
       {{ 'hello world with ES6' | capitalizeES6 }}
+    </div>
+    <div>
+      <h1> Debugging with JSON filter </h1>
+      <p>Cat object: {{ cat }} </p>
     </div>
   </div>
 </template>
@@ -16,7 +23,10 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      cat :{
+        sound :'meow'
+      }
     }
   }
 }
