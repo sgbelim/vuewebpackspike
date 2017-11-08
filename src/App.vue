@@ -3,7 +3,8 @@
     <img src="./assets/logo.png">
     <ul>
         <li><a href="/computed-properties.html">Computed Properties</a></li>
-      </ul>
+        <li><a href="/ChapterTwo.html">ChapterTwo</a></li>
+    </ul>
     <h1>{{ msg }}</h1>
     <br/><br/>
     <div>
@@ -20,21 +21,21 @@
 
 <script>
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      cat :{
-        sound :'meow'
+      msg: "Welcome to Your Vue.js App",
+      cat: {
+        sound: "meow"
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -42,7 +43,8 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 

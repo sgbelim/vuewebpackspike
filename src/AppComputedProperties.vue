@@ -81,12 +81,21 @@
                 </tbody>
             </table>
        </div>
+      <h2>-----------------------------------------------------------Example 6 (Date Formatting)-----------------------------------------</h2>
+       <div>
+          The storming of the Bastille, happened on {{ bastilleStormingDate  | date('en')}}
+       </div>
+        <div>
+          Today's date is {{ getTodaysDate() }}
+       </div>
 
 
   </div>
 </template>
 
 <script>
+import moment from "moment";
+
 let surname = "Snow";
 
 export default {
@@ -109,7 +118,8 @@ export default {
         { name: "Tarbela Dam", country: "Pakistan", electricity: 3500 },
         { name: "Guri Dam", country: "Venezuela", electricity: 10200 }
       ],
-      order: 1
+      order: 1,
+      bastilleStormingDate: "1789-07-14"
     };
   },
   computed: {
@@ -129,7 +139,7 @@ export default {
     },
     sortDamsByElectricity() {
       return this.dams.sort(
-        (d1, d2) => d2.electricity - d1.electricity * this.order
+        (d1, d2) => (d2.electricity - d1.electricity) * this.order
       );
     }
   },
@@ -152,6 +162,9 @@ export default {
     },
     sort() {
       this.order = this.order * -1;
+    },
+    getTodaysDate() {
+        return moment();
     }
   }
 };
@@ -195,6 +208,6 @@ a {
 }
 
 table {
-    margin: 0px auto;
+  margin: 0px auto;
 }
 </style>
