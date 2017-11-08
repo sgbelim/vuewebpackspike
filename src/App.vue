@@ -3,7 +3,8 @@
     <img src="./assets/logo.png">
     <ul>
         <li><a href="/computed-properties.html">Computed Properties</a></li>
-        <li><a href="/ChapterTwo.html">ChapterTwo</a></li>
+        <li><a href="/ChapterTwo.html">Chapter Two</a></li>
+        <li><a href="/ChapterFour.html">Chapter Four</a></li>
     </ul>
     <h1>{{ msg }}</h1>
     <br/><br/>
